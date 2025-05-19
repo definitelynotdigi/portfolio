@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+	
+	<header>
+        <div class="header-text">
+            <h1>Hi I'm Diether</h1>
+            <p>Web Developer & Designer</p>
+        </div>
+        <div class="header-image">
+            <img src="self3.jpg" alt="Diether">
+        </div>
+    </header>
+	
+    <div class="container">
+        <section id="about" class="section">
+            <h2>Hi Hello!</h2>
+            <p>My name is Diether, First year collage student. A passionate web developer who loves building clean and functional websites using HTML, CSS, and JavaScript.</p>
+            <img src="self2.jpg" alt="Diether" style="margin-top:1rem; max-width: 100%; border-radius: 8px;">
+        </section>
+        <section id="projects" class="section">
+            <h2>Featured Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="1.jpg" alt="Project One">
+                    <div class="project-content">
+                        <h3>Responsive Website</h3>
+                        <p>A fully responsive website built with modern HTML5 and CSS3 standards.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="2.png" alt="Project Two">
+                    <div class="project-content">
+                        <h3>Todo App</h3>
+                        <p>A JavaScript-based todo application featuring local storage.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="3.jpg" alt="Project Three">
+                    <div class="project-content">
+                        <h3>Portfolio Site</h3>
+                        <p>A personal portfolio to showcase work and skills, built with accessibility in mind.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container2">
+        <section id="about" class="section">
+            <h2>Hobbies</h2>
+            <p>Am a Gamer, Artist, Anime Watcher and Athlete.</p>
+            <img src="game.avif" alt="Diether" style="margin-top:1rem; max-width: 100%; border-radius: 10px;">
+            <img src="draw.jpg" alt="Diether" style="margin-top:1rem; max-width: 100%; border-radius: 10px;">
+            <img src="watch.webp" alt="Diether" style="margin-top:1rem; margin-left:0rem; max-width: 100%; border-radius: 10px;">
+            <img src="basketball.webp" alt="Diether" style="margin-top:1rem; max-width: 100%; border-radius: 10px;">
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <p>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required>
+                </p>
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </p>
+                <p>
+                    <button type="submit">Send</button>
+                </p>
+            </form>
+            <p id="formResponse"></p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Diether. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                document.getElementById('formResponse').textContent = `Thank you, ${name}! Your message has been sent.`;
+                this.reset();
+            } else {
+                document.getElementById('formResponse').textContent = 'Please fill out all fields.';
+            }
+        });
+    </script>
+</body>
+</html>
